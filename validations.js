@@ -45,13 +45,13 @@ exports = module.exports = function(App) {
         for (var i in result.errors) {
           if (result.errors[i].name === 'required') {
             var path = result.errors[i].argument;
-            errors[path] = path + " is missing";
+            errors[path] = [path + " is missing"];
           } else if (result.errors[i].name === 'type') {
             var path = result.errors[i].property.split('.').pop();
-            errors[path] = path + ' is not a valid ' + result.errors[i].schema.type;
+            errors[path] = [path + ' is not a valid ' + result.errors[i].schema.type];
           } else {
             var path = result.errors[i].property.split('.').pop();
-            errors[path] = result.errors[i].message;
+            errors[path] = [result.errors[i].message];
           }
         }
         next({ status: 422, message: 'Invalid parameters', errors: errors });

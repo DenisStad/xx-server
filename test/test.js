@@ -129,9 +129,9 @@ describe('server', function() {
         res.body.status.should.equal(422);
         res.body.code.should.equal(422);
         res.body.message.should.equal('Invalid parameters');
-        res.body.errors.attr1.should.equal('attr1 is missing');
-        res.body.errors.attr2.should.equal('attr2 is not a valid string');
-        res.body.errors.attr3.should.equal('attr3 is not a valid integer');
+        res.body.errors.attr1[0].should.equal('attr1 is missing');
+        res.body.errors.attr2[0].should.equal('attr2 is not a valid string');
+        res.body.errors.attr3[0].should.equal('attr3 is not a valid integer');
         request(App.server)
           .post('/valid')
           .send({
