@@ -1,0 +1,37 @@
+{
+  "name": "xx-server",
+  "version": "1.0.0",
+  "description": "Default server for xerxes",
+  "main": "setup.js",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha test/test.js"
+  },
+  "keywords": [
+    "xerxes",
+    "server"
+  ],
+  "author": "Denis Stadniczuk",
+  "license": "ISC",
+  "files": [
+    "setup.js",
+    "validations.js",
+    "start.js"
+  ],
+  "dependencies": {
+    "body-parser": "^1.14.0",
+    "express": "^4.13.3",
+    "http": "0.0.0",
+    "jsonschema": "^1.0.2",
+    "response-time": "^2.3.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.2",
+    "should": "^7.1.0",
+    "supertest": "^1.1.0",
+    "xerxes": "0.0.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DenisStad/xx-server"
+  }
+}
