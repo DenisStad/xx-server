@@ -44,6 +44,11 @@ exports = module.exports = function(App) {
     App.router.describe = current.describe;
     App.router.push = current.push;
     App.router.pop = current.pop;
+    if (typeof current.path === 'function') {
+      App.router.path = current.path() + route;
+    } else {
+      App.router.path = current.path + route;
+    }
     routerStack.push(current);
     current.use(route, App.router);
     if (it) {
