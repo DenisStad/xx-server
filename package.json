@@ -1,6 +1,6 @@
 {
   "name": "xx-server",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Default server for xerxes",
   "main": "setup.js",
   "scripts": {
