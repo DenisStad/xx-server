@@ -1,6 +1,6 @@
 {
   "name": "xx-server",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Default server for xerxes",
   "main": "setup.js",
   "scripts": {
@@ -15,7 +15,8 @@
   "files": [
     "setup.js",
     "validations.js",
-    "start.js"
+    "start.js",
+    "cors.js"
   ],
   "dependencies": {
     "body-parser": "^1.14.0",
